@@ -1,0 +1,16 @@
+syntax = "proto3";
+option go_package = "github.com/tkn13/grpc/student";
+
+service Student{
+    rpc GetStudentById (StudentRequest) returns (StudentResponse){}
+}
+
+message StudentRequest {
+    int64 id = 1;
+}
+
+message StudentResponse {
+    int64 id = 1;
+    string name =2;
+    int32 age = 3;
+}
